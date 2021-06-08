@@ -11,11 +11,28 @@ This repository contains the code and resources from the following [paper](https
 
 ## Candidate Generation: 
 
+First, you need to install the DiscourseSimplification code. We use the same code from [this](https://github.com/Lambda-3/DiscourseSimplification) repo.
+
+```
+cd DiscourseSimplification
+mvn clean install -DskipTests
+```
+
+To generate the candidates, you can use the following command:
+
+```python3 generate_candidates.py --input <input filename> --output <candidate filename>```
+    
 ## Candidate Ranking: 
+
+To rank the candidates generated in the previous step,  you can use the following command:
+
+```
+python3 ranking/main.py --input <input filename> --candidates <candidate filename> --output <best ranked candidate filename>
+```
 
 ## Paraphrase Generation:
 
-
+Coming Soon.
 
 ## Citation
 Please cite if you use the above resources for your research
